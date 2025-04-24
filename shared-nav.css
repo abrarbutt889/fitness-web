@@ -1,0 +1,477 @@
+@import 'variables.css';
+
+/* Main Navigation */
+.main-nav {
+    background-color: var(--secondary-color);
+    padding: var(--spacing-md) var(--spacing-lg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+}
+
+.nav-container {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: var(--transition-normal);
+}
+
+.logo:hover {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-normal);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.nav-button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    background-color: var(--primary-dark);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background-color);
+    min-width: 220px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-normal);
+    z-index: 1000;
+    padding: var(--spacing-sm) 0;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+    font-size: 0.95rem;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+/* Mobile Menu */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    padding: var(--spacing-lg);
+    z-index: 2000;
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-nav.active {
+    transform: translateX(0);
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-close {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    transition: var(--transition-normal);
+}
+
+.mobile-nav-close:hover {
+    color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.mobile-nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sub Navigation */
+.sub-nav {
+    background-color: var(--surface-color);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sub-nav-container {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    display: flex;
+    gap: var(--spacing-lg);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.sub-nav-container::-webkit-scrollbar {
+    display: none;
+}
+
+.sub-nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: var(--spacing-sm) 0;
+    position: relative;
+    transition: var(--transition-normal);
+}
+
+.sub-nav-link:hover,
+.sub-nav-link.active {
+    color: var(--primary-color);
+}
+
+.sub-nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* Add these styles after your existing mobile navigation styles */
+
+.mobile-nav-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.mobile-nav-section h3 {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-section a {
+    color: var(--text-light);
+    text-decoration: none;
+    display: block;
+    padding: var(--spacing-sm) 0;
+    font-size: 1rem;
+    transition: var(--transition-normal);
+}
+
+.mobile-nav-section a:hover {
+    color: var(--primary-color);
+    padding-left: var(--spacing-sm);
+}
+
+/* Update responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .mobile-nav-section a {
+        font-size: 0.95rem;
+    }
+
+    .sub-nav-container {
+        padding-bottom: var(--spacing-sm);
+    }
+}
+
+/* Add hover effect for nav items */
+.nav-item {
+    position: relative;
+}
+
+.nav-link i {
+    transition: transform var(--transition-normal);
+}
+
+.nav-item:hover .nav-link i {
+    transform: rotate(180deg);
+}
+
+/* Add these styles after your existing navigation styles */
+
+/* Category Navigation */
+.category-nav {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
+}
+
+.category-container {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.category-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    padding: var(--spacing-md) 0;
+    margin-right: var(--spacing-xl);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.sub-categories {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-sm) 0;
+    border-top: 1px solid var(--border-color);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.sub-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.sub-category-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    padding: var(--spacing-xs) 0;
+    position: relative;
+    transition: var(--transition-normal);
+}
+
+.sub-category-link:hover,
+.sub-category-link.active {
+    color: var(--primary-color);
+}
+
+.sub-category-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* Newsletter Banner */
+.newsletter-banner {
+    background-color: #e6f6f5;
+    padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.banner-content {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.banner-text h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-primary);
+}
+
+.banner-text p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--background-color);
+}
+
+.breadcrumb-container {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.breadcrumb-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.breadcrumb-separator {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin: 0 var(--spacing-xs);
+}
+
+.breadcrumb-current {
+    color: var(--text-primary);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: var(--spacing-md);
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .category-container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .sub-categories {
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-md);
+    }
+
+    .breadcrumb-container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .breadcrumb-current {
+        font-size: 1.5rem;
+    }
+}
+
+/* Active page indicators */
+.category-link.active {
+    position: relative;
+}
+
+.category-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Smooth scrolling for sub-categories */
+.sub-categories {
+    scroll-behavior: smooth;
+}
+
+/* Add hover effects */
+.category-link:hover,
+.breadcrumb-link:hover {
+    text-decoration: underline;
+}
+
+/* Newsletter button hover */
+.banner-content .subscribe-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+} 
