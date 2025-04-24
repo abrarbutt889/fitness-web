@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness & Workout Tracker | Contact Us</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/contact-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="logo">healthline</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="workouts.html">Workouts</a>
+      <a href="diet.html">Diet</a>
+      <a href="contact.html">Contact</a>
+      <a href="payment_form.html" class="subscribe">SUBSCRIBE</a>
+      <input type="search" placeholder="🔍">
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Contact Us</h1>
+      <p>Get in touch with our fitness experts.</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Form -->
+    <section class="contact-section">
+      <h2>Get in Touch</h2>
+      <form action="submit.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required maxlength="50"
+          pattern="[A-Za-z ]+">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Embedded Google Map -->
+    <section>
+      <h2>Find Us</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAP_LINK_HERE" width="600" height="450"
+        style="border:0;" allowfullscreen>
+      </iframe>
+    </section>
+
+    <!-- Collapsible FAQs -->
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How can I join the fitness program?</summary>
+        <p>You can sign up by filling out the contact form or visiting our gym.</p>
+      </details>
+      <details>
+        <summary>Do you offer online fitness coaching?</summary>
+        <p>Yes, we offer both in-person and online coaching programs.</p>
+      </details>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="diet.html">Diet Plans</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>Email: <a href="mailto:info@fitnesstracker.com">info@fitnesstracker.com</a></p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <p>Stay updated with our latest fitness tips and updates on social media.</p>
+            <p>Join our community for daily motivation!</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Fitness Tracker. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/enhanced-features.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+
+</html>

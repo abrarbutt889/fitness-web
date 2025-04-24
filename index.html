@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness & Wellness Hub</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="top-nav">
+    <div class="logo">healthline</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="workouts.html">Workouts</a>
+      <a href="diet.html">Diet</a>
+      <a href="contact.html">Contact</a>
+      <a href="payment_form.html" class="subscribe">SUBSCRIBE</a>
+      <input type="search" placeholder="🔍">
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Sub Nav -->
+  <div class="sub-nav">
+    <a href="fitness.html">Fitness</a>
+    <a href="exercise.html">Exercise</a>
+    <a href="cardio.html">Cardio</a>
+    <a href="strength.html">Strength Training</a>
+    <a href="yoga.html">Yoga</a>
+    <a href="holistic.html">Holistic Fitness</a>
+    <a href="products.html">Products</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Fitness</h1>
+      <p>The fitness that fits you</p>
+    </div>
+  </section>
+
+  <main>
+    <!-- Workout Video Section -->
+    <section class="video-section">
+      <h2>Workout Videos</h2>
+      <p>Watch these videos to learn effective workout techniques.</p>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/zZahk7A6k_M?autoplay=1&mute=1" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+        <iframe 
+          src="https://www.youtube.com/embed/Tk98boAPvok?autoplay=1&mute=1" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+        <iframe 
+          src="https://www.youtube.com/embed/rpEt1Za4ke8?autoplay=1&mute=1" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Workout Section -->
+    <section class="workout-section">
+      <h2>Featured Workout Plans</h2>
+      <div class="workout-videos">
+        <div class="video-grid">
+          <div class="video-card">
+            <h3>HIIT Cardio Blast</h3>
+            <iframe src="https://www.youtube.com/embed/ml6cT4AZdqI" title="HIIT Workout" allowfullscreen></iframe>
+            <p>High-intensity interval training for maximum calorie burn</p>
+          </div>
+          <div class="video-card">
+            <h3>Full Body Strength</h3>
+            <iframe src="https://www.youtube.com/embed/95846CBGU0M" title="Strength Training" allowfullscreen></iframe>
+            <p>Complete strength training routine for all major muscle groups</p>
+          </div>
+          <div class="video-card">
+            <h3>Yoga Flow</h3>
+            <iframe src="https://www.youtube.com/embed/v7AYKMP6rOE" title="Yoga Session" allowfullscreen></iframe>
+            <p>Relaxing yoga flow for flexibility and mindfulness</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Weekly Workout Schedule</h3>
+      <table class="workout-plan">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Workout</th>
+            <th>Duration</th>
+            <th>Intensity</th>
+            <th>Focus Areas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HIIT Cardio</td>
+            <td>30 mins</td>
+            <td>High</td>
+            <td>Full Body, Cardio Endurance</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Strength Training</td>
+            <td>45 mins</td>
+            <td>Medium-High</td>
+            <td>Upper Body, Core</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Yoga & Flexibility</td>
+            <td>40 mins</td>
+            <td>Low</td>
+            <td>Recovery, Flexibility</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>Circuit Training</td>
+            <td>35 mins</td>
+            <td>High</td>
+            <td>Full Body, Strength</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Lower Body Focus</td>
+            <td>50 mins</td>
+            <td>Medium-High</td>
+            <td>Legs, Glutes, Core</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>Active Recovery</td>
+            <td>30 mins</td>
+            <td>Low</td>
+            <td>Light Cardio, Stretching</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>Rest Day</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Complete Rest or Light Walk</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="workout-tips">
+        <h3 class="section-subtitle">Essential Workout Tips</h3>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <i class="fas fa-tint"></i>
+            <h4>Stay Hydrated</h4>
+            <p>Drink water before, during, and after your workout. Aim for 16-20 oz before exercise and 8-10 oz every 15 minutes during activity.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-heart"></i>
+            <h4>Proper Warm-Up</h4>
+            <p>Always start with 5-10 minutes of light cardio and dynamic stretching to prevent injury and improve performance.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-apple-alt"></i>
+            <h4>Nutrition Timing</h4>
+            <p>Eat a light meal 2-3 hours before workout and have a protein-rich snack within 30 minutes after exercise.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-bed"></i>
+            <h4>Rest & Recovery</h4>
+            <p>Allow adequate rest between workouts and aim for 7-9 hours of sleep per night for optimal recovery.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-chart-line"></i>
+            <h4>Progressive Overload</h4>
+            <p>Gradually increase intensity, weight, or duration to continue seeing improvements in fitness levels.</p>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-notes-medical"></i>
+            <h4>Listen to Your Body</h4>
+            <p>Pay attention to pain vs. discomfort and adjust your workout intensity accordingly.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="workout-cta">
+        <h3>Ready to Start Your Fitness Journey?</h3>
+        <p>Get personalized workout plans tailored to your goals</p>
+        <div class="cta-buttons">
+          <a href="workouts.html" class="btn primary-btn">View All Workouts</a>
+          <a href="contact.html" class="btn secondary-btn">Contact a Trainer</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diet Section -->
+    <section class="diet-section">
+      <h2>Personalized Diet Plans</h2>
+      <div class="diet-intro">
+        <p>Discover nutrition plans tailored to your fitness goals and lifestyle</p>
+      </div>
+
+      <div class="meal-plans-grid">
+        <div class="meal-card">
+          <div class="meal-image">
+            <img src="images/breakfast.jpg" alt="Healthy Breakfast">
+            <span class="meal-time">Breakfast</span>
+          </div>
+          <div class="meal-content">
+            <h3>Power Breakfast</h3>
+            <p>Start your day with energy-packed nutrients</p>
+            <ul class="meal-details">
+              <li><i class="fas fa-fire"></i> 450 calories</li>
+              <li><i class="fas fa-clock"></i> Ready in 15 mins</li>
+              <li><i class="fas fa-leaf"></i> High Protein</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="meal-card">
+          <div class="meal-image">
+            <img src="images/lunch.jpg" alt="Healthy Lunch">
+            <span class="meal-time">Lunch</span>
+          </div>
+          <div class="meal-content">
+            <h3>Balance Bowl</h3>
+            <p>Perfect mix of proteins, carbs, and healthy fats</p>
+            <ul class="meal-details">
+              <li><i class="fas fa-fire"></i> 550 calories</li>
+              <li><i class="fas fa-clock"></i> Ready in 20 mins</li>
+              <li><i class="fas fa-leaf"></i> Rich in Fiber</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="meal-card">
+          <div class="meal-image">
+            <img src="images/dinner.jpg" alt="Healthy Dinner">
+            <span class="meal-time">Dinner</span>
+          </div>
+          <div class="meal-content">
+            <h3>Lean Dinner</h3>
+            <p>Light yet satisfying evening meal</p>
+            <ul class="meal-details">
+              <li><i class="fas fa-fire"></i> 400 calories</li>
+              <li><i class="fas fa-clock"></i> Ready in 25 mins</li>
+              <li><i class="fas fa-leaf"></i> Low Carb</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="nutrition-tracker">
+        <h3 class="section-subtitle">Daily Nutrition Goals</h3>
+        <div class="nutrition-grid">
+          <div class="nutrition-card">
+            <div class="nutrition-header">
+              <i class="fas fa-drumstick-bite"></i>
+              <h4>Protein</h4>
+            </div>
+            <div class="nutrition-bar">
+              <div class="nutrition-fill protein" style="width: 75%;">
+                <span>75%</span>
+              </div>
+            </div>
+            <p>150g / 200g</p>
+          </div>
+
+          <div class="nutrition-card">
+            <div class="nutrition-header">
+              <i class="fas fa-bread-slice"></i>
+              <h4>Carbs</h4>
+            </div>
+            <div class="nutrition-bar">
+              <div class="nutrition-fill carbs" style="width: 60%;">
+                <span>60%</span>
+              </div>
+            </div>
+            <p>180g / 300g</p>
+          </div>
+
+          <div class="nutrition-card">
+            <div class="nutrition-header">
+              <i class="fas fa-cheese"></i>
+              <h4>Fats</h4>
+            </div>
+            <div class="nutrition-bar">
+              <div class="nutrition-fill fats" style="width: 45%;">
+                <span>45%</span>
+              </div>
+            </div>
+            <p>45g / 100g</p>
+          </div>
+
+          <div class="nutrition-card">
+            <div class="nutrition-header">
+              <i class="fas fa-fire-alt"></i>
+              <h4>Calories</h4>
+            </div>
+            <div class="nutrition-bar">
+              <div class="nutrition-fill calories" style="width: 65%;">
+                <span>65%</span>
+              </div>
+            </div>
+            <p>1,625 / 2,500</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="diet-cta">
+        <h3>Get Your Custom Meal Plan</h3>
+        <p>Achieve your fitness goals with personalized nutrition guidance</p>
+        <div class="cta-buttons">
+          <a href="diet.html" class="btn primary-btn">View Meal Plans</a>
+          <a href="contact.html" class="btn secondary-btn">Consult Nutritionist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+      <button class="floating-button" id="quickActionsToggle">
+        <i class="fas fa-plus"></i>
+      </button>
+      <div class="quick-menu">
+        <a href="workouts.html" class="quick-action-item">
+          <i class="fas fa-dumbbell"></i>
+          <span>Quick Workout</span>
+        </a>
+        <a href="diet.html" class="quick-action-item">
+          <i class="fas fa-apple-alt"></i>
+          <span>Meal Planner</span>
+        </a>
+        <a href="progress.html" class="quick-action-item">
+          <i class="fas fa-chart-line"></i>
+          <span>Track Progress</span>
+        </a>
+        <a href="timer.html" class="quick-action-item">
+          <i class="fas fa-stopwatch"></i>
+          <span>Workout Timer</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+     <!-- Footer -->
+     <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="workouts.html">Workouts</a></li>
+              <li><a href="diet.html">Diet Plans</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>Email: <a href="mailto:info@fitnesstracker.com">info@fitnesstracker.com</a></p>
+            <p>Phone: +1 (123) 456-7890</p>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/gym" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/gym_nust/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/fitness" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Fitness Tracker. All rights reserved.</p>
+          <p id="current-datetime"></p>
+        </div>
+      </footer>
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Scripts -->
+  <script src="js/common.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/enhanced-features.js"></script>
+</body>
+</html> 

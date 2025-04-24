@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Form</title>
+  <link rel="stylesheet" href="style/payment-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a> | <a href="workouts.html">Workout</a> |
+    <a href="diet.html">Diet Plans</a> | <a href="contact.html">Contact</a> |
+    <a href="payment_form.html">Buy Now</a>
+  </nav>
+
+  <br />
+
+  <!-- Supplements Section -->
+  <fieldset>
+    <legend>
+      <h2>Available Supplements</h2>
+    </legend>
+    <p>Select the supplements you want to purchase:</p>
+
+    <table border="1" cellpadding="10">
+      <tr>
+        <th>Select</th>
+        <th>Image</th>
+        <th>Supplement</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" name="supplement" value="Whey Protein" data-price="40" onclick="updateSummary()" />
+        </td>
+        <td>
+          <img src="images/1118950_1.webp" alt="Whey Protein" width="80" />
+        </td>
+        <td>Whey Protein</td>
+        <td>$40</td>
+        <td>Boosts muscle recovery and protein intake.</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" name="supplement" value="BCAA" data-price="30" onclick="updateSummary()" />
+        </td>
+        <td><img src="images/1118952_1.webp" alt="BCAA" width="80" /></td>
+        <td>BCAA</td>
+        <td>$30</td>
+        <td>Enhances endurance and reduces muscle fatigue.</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" name="supplement" value="Pre-Workout" data-price="35" onclick="updateSummary()" />
+        </td>
+        <td>
+          <img src="images/760_202407040651_Amino.avif" alt="Pre-Workout" width="80" />
+        </td>
+        <td>Pre-Workout</td>
+        <td>$35</td>
+        <td>Boosts energy and focus before workouts.</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" name="supplement" value="Creatine" data-price="25" onclick="updateSummary()" />
+        </td>
+        <td>
+          <img src="images/760_202408020355_SM.avif" alt="Creatine" width="80" />
+        </td>
+        <td>Creatine</td>
+        <td>$25</td>
+        <td>Increases strength and power output.</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" name="supplement" value="Fat Burner" data-price="45" onclick="updateSummary()" />
+        </td>
+        <td>
+          <img src="images/download.jpeg" alt="Fat Burner" width="80" />
+        </td>
+        <td>Fat Burner</td>
+        <td>$45</td>
+        <td>Helps burn fat and boost metabolism.</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" name="supplement" value="Multivitamin" data-price="20" onclick="updateSummary()" />
+        </td>
+        <td>
+          <img src="images/images (1).jpeg" alt="Multivitamin" width="80" />
+        </td>
+        <td>Multivitamin</td>
+        <td>$20</td>
+        <td>Supports overall health and immunity.</td>
+      </tr>
+    </table>
+  </fieldset>
+
+  <br />
+  <br />
+  <form id="payment-form">
+    <h1>Payment Form</h1>
+    <p><strong>Required fields are marked with *</strong></p>
+
+    <!-- Contact Information -->
+    <fieldset>
+      <legend>
+        <h2>Contact Information</h2>
+      </legend>
+
+      <label for="name">Name: * </label>
+      <input type="text" name="name" id="name" required placeholder="Enter your full name" maxlength="50"
+        autocomplete="name" />
+      <br /><br />
+
+      <fieldset>
+        <legend>Gender *</legend>
+        <input type="radio" name="gender" id="male" value="Male" required />
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" id="female" value="Female" required />
+        <label for="female">Female</label>
+      </fieldset>
+      <br />
+
+      <label for="address">Address: *</label>
+      <textarea name="address" id="address" cols="50" rows="5" required placeholder="Enter your address"></textarea>
+      <br /><br />
+
+      <label for="email">Email: *</label>
+      <input type="email" name="email" id="email" required placeholder="Enter your email" autocomplete="email" />
+      <br /><br />
+
+      <label for="pincode">Pincode: *</label>
+      <input type="text" name="pincode" id="pincode" required placeholder="Enter your pincode" pattern="[0-9]{6}"
+        maxlength="6" minlength="6" title="Enter a 6-digit pincode" />
+    </fieldset>
+    <br />
+
+    <!-- Payment Information -->
+    <fieldset>
+      <legend>
+        <h2>Payment Information</h2>
+      </legend>
+
+      <label for="cardNumber">Card Number: *</label>
+      <input type="text" name="cardNumber" id="cardNumber" required placeholder="1234 5678 9012 3456" maxlength="19" />
+      <br /><br />
+
+      <label for="cardName">Cardholder Name: *</label>
+      <input type="text" name="cardName" id="cardName" required placeholder="Enter cardholder name" />
+      <br /><br />
+
+      <label for="expiryDate">Expiration Date: *</label>
+      <input type="month" name="expiryDate" id="expiryDate" required min="2024-02" />
+      <br /><br />
+
+      <label for="cvv">CVV: *</label>
+      <input type="password" name="cvv" id="cvv" required placeholder="123" maxlength="3" />
+      <br /><br />
+
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="selected-items"></div>
+        <div class="total">
+          <strong>Total Amount:</strong>
+          <span id="total-amount">$0.00</span>
+        </div>
+      </div>
+
+      <input type="checkbox" id="terms" required />
+      <label for="terms">I agree to the <a href="#">terms and conditions</a>.</label>
+      <br /><br />
+
+      <button type="submit" class="pay-now-button">Pay Now</button>
+    </fieldset>
+  </form>
+
+  <script src="js/payment.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workouts.html">Workouts</a></li>
+          <li><a href="diet.html">Diet Plans</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p>Email: <a href="mailto:info@fitnesstracker.com">info@fitnesstracker.com</a></p>
+        <p>Phone: +1 (123) 456-7890</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/gym" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/gym_nust/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/fitness" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Fitness Tracker. All rights reserved.</p>
+      <p id="current-datetime"></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
